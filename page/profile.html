@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Daily Drip - Profile</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/icon/coffee-shop-logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="spacer">
+        <div class="header-content__wrapper">
+          <a href="../../index.html" class="logo-container">
+            <img
+              src="../../assets/icon/coffee-shop-logo.png"
+              alt="cup of coffee"
+              class="logo-icon"
+            />
+            <h1 class="logo-text">Daily Drip</h1>
+          </a>
+
+          <input type="checkbox" name="menu-toggler" id="menu-toggler" />
+          <label for="menu-toggler" class="toggler">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
+          <div class="menu-wrapper">
+            <nav class="main-navigation">
+              <ul class="nav-items">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./product.html">Product</a></li>
+                <li><a href="./cart.html">Your Cart</a></li>
+                <li><a href="./history.html">History</a></li>
+              </ul>
+            </nav>
+
+            <div class="secondary-menu">
+              <ul>
+                <li>
+                  <img src="../assets/icon/search-icon.svg" alt="search icon" />
+                </li>
+                <li>
+                  <img
+                    src="../assets/icon/chatbox-icon.svg"
+                    alt="dialog bar icon"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="../assets/img/profile-picture.webp"
+                    alt="Smiling girl picture"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-section">
+      <section class="main-content-wrapper">
+        <div class="spacer">
+          <h2 class="page-title">User Profile</h2>
+          <div class="profile-content-wrapper">
+            <div class="profile-content__items first-child profile-aside">
+              <div class="profile-aside__image-container">
+                <img src="../assets/img/profile-picture.webp" alt="" />
+              </div>
+
+              <div class="profile-aside__info">
+                <p class="name">Zulaikha</p>
+                <p class="email">zulaikha17@gmail.com</p>
+              </div>
+
+              <input
+                type="button"
+                value="Choose photo"
+                class="btn btn-yellow"
+              />
+              <input type="button" value="Remove photo" class="btn btn-brown" />
+            </div>
+
+            <div class="profile-content__items profile-aside">
+              <input
+                type="button"
+                value="Edit Password"
+                class="btn btn-white"
+              />
+            </div>
+
+            <div
+              class="profile-content__items profile-content__unordered profile-aside"
+            >
+              <p class="text">Do you want to save the change ?</p>
+              <input type="button" value="Save Change" class="btn btn-brown" />
+              <input type="button" value="Cancel" class="btn btn-yellow" />
+              <input type="button" value="Log out" class="btn btn-white" />
+            </div>
+
+            <div class="profile-content__items form-content">
+              <div class="profile-content">
+                <div class="profile-content__top">
+                  <h3>Contacts</h3>
+                  <form action="#">
+                    <div class="input-group">
+                      <label for="email">Email address :</label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        value="zulaikha17@gmail.com"
+                      />
+                    </div>
+
+                    <div class="input-group">
+                      <label for="phone">Mobile Phone :</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        value="(+62)813456782"
+                      />
+                    </div>
+
+                    <div class="input-group">
+                      <label for="address">Delivery address :</label>
+                      <input
+                        type="text"
+                        name="address"
+                        id="address"
+                        value="Iskandar Street no. 67 Block A Near Bus Stop"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="profile-content__bottom">
+                  <h3>Details</h3>
+                  <form action="#">
+                    <div class="input-group">
+                      <label for="full-name">Display Name :</label>
+                      <input
+                        type="text"
+                        name="full-name"
+                        id="full-name"
+                        value="Zulaikha"
+                      />
+                    </div>
+
+                    <div class="input-group">
+                      <label for="first-name">First Name :</label>
+                      <input
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        value="Zulaikha"
+                      />
+                    </div>
+
+                    <div class="input-group">
+                      <label for="last-name">Last Name :</label>
+                      <input
+                        type="text"
+                        name="last-name"
+                        id="last-name"
+                        value="Nirmala"
+                      />
+                    </div>
+
+                    <div class="input-group">
+                      <label for="birthday">DD/MM/YY :</label>
+                      <input
+                        type="date"
+                        name="birthday"
+                        id="birthday"
+                        value="1990-04-03"
+                      />
+                    </div>
+                  </form>
+
+                  <div class="radio-input-group">
+                    <span class="radio-input">
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="male"
+                        value="Male"
+                      />
+                      <label for="male">Male</label>
+                    </span>
+
+                    <span class="radio-input">
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="Female"
+                        checked
+                      />
+                      <label for="female">Female</label>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="auth-footer">
+      <div class="auth-footer__left">
+        <a href="index.html" class="logo-container">
+          <img
+            src="../../assets/icon/coffee-shop-logo.png"
+            alt="cup of coffee"
+            class="logo-icon"
+          />
+          <h1 class="logo-text">Daily Drip</h1>
+        </a>
+
+        <p class="description">
+          Coffee Shop is a store that sells some good meals, and especially
+          coffee. We provide high quality beans
+        </p>
+
+        <ul class="socmed">
+          <li>
+            <img src="../../assets/icon/Facebook.png" alt="Facebook logo" />
+          </li>
+          <li>
+            <img src="../../assets/icon/Twitter.png" alt="Twitter logo" />
+          </li>
+          <li>
+            <img src="../../assets/icon/Instagram.png" alt="Instagram logo" />
+          </li>
+        </ul>
+
+        <p class="copyright">&copy; Daily Drip 2023</p>
+      </div>
+      <div class="auth-footer__right">
+        <div class="footer-col product">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Countries</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col engage">
+          <h3>Engage</h3>
+          <ul>
+            <li><a href="#">Daily Drip ?</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

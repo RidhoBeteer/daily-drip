@@ -5,6 +5,7 @@
   --color-yellow: #ffba33;
   --color-yellow-hover: hsl(40, 100%, 72%);
   --color-brown: #6a4029;
+  --color-brown-hover: hsl(21, 37%, 35%);
   --color-grayish: #f8f8f8;
   --color-gray: #4f5665;
   --spacing-mobile-horizontal: 25px;
@@ -55,6 +56,15 @@ input[type="submit"] {
   background-color: var(--color-white);
 }
 
+.btn-brown {
+  background-color: var(--color-brown);
+  color: var(--color-grayish);
+}
+
+.btn-brown:hover {
+  background-color: var(--color-brown-hover);
+}
+
 .auth-container {
   padding: 0 var(--spacing-mobile-horizontal);
   /* height: 100vh; */
@@ -92,6 +102,7 @@ input[type="submit"] {
 .logo-container {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .logo-icon {
@@ -256,6 +267,241 @@ input[type="submit"] {
   color: #afb5c0;
 }
 
+/* ==============================  */
+/*  END OF LOGIN & SIGN UP STYLE  */
+/* ==============================  */
+
+.forgot-pass-container {
+  background-image: url("./assets/img/forgot-password-banner.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--color-white);
+  height: 100vh;
+  padding: var(--spacing-mobile-horizontal);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* gap: 40px; */
+}
+
+.forgot-pass-container .btn {
+  padding: 0.6em;
+}
+
+.forgot-pass__header h1 {
+  font-size: 1.25rem;
+}
+
+.forgot-pass__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.forgot-button,
+.resend-button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.forgot-pass__resend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.forgot-pass__resend .resend-button {
+  padding: 0.5em 2em;
+}
+
+/* ==============================  */
+/*  END OF FORGOT PASSWORD STYLE  */
+/* ==============================  */
+
+.spacer {
+  padding: 0 var(--spacing-mobile-horizontal);
+}
+
+.header-content__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+}
+
+#menu-toggler {
+  display: none;
+}
+
+.toggler {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.toggler .bar {
+  width: 30px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--color-dark-blue);
+}
+
+.header-content__wrapper img {
+  max-width: 30px;
+  height: 33px;
+  overflow: hidden;
+}
+
+.menu-wrapper {
+  background-color: var(--color-white);
+  display: none;
+  position: absolute;
+  top: 65px;
+  left: -25px;
+  right: -25px;
+  padding: 0.5em var(--spacing-mobile-horizontal);
+  border-top: 1px solid var(--color-dark-blue);
+  border-bottom: 1px solid var(--color-dark-blue);
+  transition: 350ms ease-in;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+input[type="checkbox"]:checked ~ .menu-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-wrapper ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-wrapper ul li {
+  height: 33px;
+  line-height: 33px;
+}
+
+.main-content-wrapper {
+  background-image: url("./assets/img/bg-profile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: var(--spacing-mobile-horizontal) 0px;
+}
+
+.main-content-wrapper .page-title {
+  margin-bottom: var(--spacing-mobile-horizontal);
+  color: var(--color-white);
+  display: none;
+}
+
+.profile-content-wrapper {
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875em;
+  background-color: var(--color-grayish);
+  padding: var(--spacing-mobile-horizontal);
+}
+
+.profile-content__items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.profile-content__items > * {
+  width: 100%;
+}
+
+.profile-aside__info {
+  text-align: center;
+}
+
+.profile-aside__info .name {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.profile-aside__image-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: brown;
+}
+
+.profile-aside__image-container img {
+  max-height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.profile-content__unordered {
+  order: 4;
+  text-align: center;
+}
+
+.radio-input-group {
+  padding: 1.25em 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.radio-input,
+input[type="radio"] {
+  width: initial;
+}
+
+.profile-aside .text {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-mobile-horizontal);
+}
+
+.profile-content h3 {
+  margin-bottom: 10px;
+}
+
+.profile-content .input-group {
+  margin-bottom: 1em;
+}
+
+.profile-content-wrapper input[type="text"],
+.profile-content-wrapper input[type="email"],
+.profile-content-wrapper input[type="tel"],
+.profile-content-wrapper input[type="date"] {
+  background-color: var(--color-grayish);
+  border: none;
+  border-bottom: 1px solid var(--color-black);
+  border-radius: 0;
+  padding-bottom: 10px;
+  padding-left: 0;
+}
+
+.profile-content-wrapper label {
+  color: #9f9f9f;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
   .auth-container {
     padding: 0;
@@ -335,6 +581,66 @@ input[type="submit"] {
   .footer-col li {
     line-height: 1.5em;
   }
+
+  /* ==============================  */
+  /*  END OF LOGIN & SIGN UP STYLE  */
+  /* ==============================  */
+
+  .forgot-pass-container {
+    padding: 30px;
+  }
+
+  .forgot-pass-container .btn {
+    padding: 0.6em;
+  }
+
+  .forgot-pass__header h1 {
+    font-size: 2rem;
+  }
+
+  .forgot-pass__form {
+    width: 70%;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .forgot-pass__form .input-group:first-child {
+    flex: 3;
+  }
+
+  .forgot-pass__form .input-group:last-child {
+    flex: 1;
+  }
+
+  .forgot-pass__form .input-group:last-child .btn.forgot-button {
+    padding: 0.8em;
+  }
+
+  .forgot-pass__resend-text {
+    inline-size: 45%;
+    overflow-wrap: break-word;
+  }
+
+  .resend-button {
+    width: 30%;
+  }
+
+  .profile-content-wrapper {
+    padding: 3em 15%;
+  }
+
+  .main-content-wrapper .page-title {
+    display: block;
+  }
+
+  .profile-aside__image-container {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: brown;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -348,5 +654,47 @@ input[type="submit"] {
 
   .footer-col {
     min-width: 150px;
+  }
+
+  /* ==============================  */
+  /*  END OF LOGIN & SIGN UP STYLE  */
+  /* ==============================  */
+
+  .profile-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 3.5em;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "a b b b"
+      "c b b b"
+      "d b b b";
+  }
+
+  .profile-aside {
+    margin: 0;
+  }
+
+  .form-content {
+    grid-area: b;
+  }
+
+  .profile-content {
+    background-color: var(--color-white);
+    padding: var(--spacing-mobile-horizontal);
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  .profile-content-wrapper input[type="text"],
+  .profile-content-wrapper input[type="email"],
+  .profile-content-wrapper input[type="tel"],
+  .profile-content-wrapper input[type="date"] {
+    background-color: var(--color-white);
+    padding-bottom: 0;
+    padding-left: 0;
   }
 }
