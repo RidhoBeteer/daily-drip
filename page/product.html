@@ -41,7 +41,9 @@
             <nav class="main-navigation">
               <ul class="nav-items">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="./product.html">Product</a></li>
+                <li class="link-active">
+                  <a href="./product.html">Product</a>
+                </li>
                 <li><a href="./cart.html">Your Cart</a></li>
                 <li><a href="./history.html">History</a></li>
               </ul>
@@ -59,10 +61,12 @@
                   />
                 </li>
                 <li>
-                  <img
-                    src="../assets/img/profile-picture.webp"
-                    alt="Smiling girl picture"
-                  />
+                  <div class="image-container">
+                    <img
+                      src="../assets/img/profile-picture.webp"
+                      alt="Smiling girl picture"
+                    />
+                  </div>
                 </li>
               </ul>
             </div>
@@ -71,13 +75,225 @@
       </div>
     </header>
 
-    <div>
-      <p>Terms and condition</p>
-      <ol style="list-style-position: inside; padding: 0">
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-      </ol>
+    <div class="product-page-container">
+      <aside class="promo-section">
+        <div class="promo-section__wrapper">
+          <div class="promo-section-content">
+            <div class="promo-section-content__header">
+              <h2 class="section-title">Promo for you</h2>
+            </div>
+
+            <p class="promo-section-content__text">
+              Coupons will be updated every weeks. Check them out!
+            </p>
+
+            <div class="promo-card">
+              <div class="promo-card__header">
+                <div class="promo-card-img-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="promo-item-name">Beef Spaghetti</p>
+                <p class="promo-discount-amount">20% OFF</p>
+                <p class="promo-item-description">
+                  Buy 1 Choco Oreo and get 20% off for Beef Spaghetti
+                </p>
+              </div>
+              <div class="promo-card__coupon">
+                <p class="coupon-title">COUPON CODE</p>
+                <p class="coupon-code">FNPR15RG</p>
+                <p class="coupon-description">Valid untill October 10th 2023</p>
+              </div>
+            </div>
+
+            <input type="button" value="Apply Coupon" class="btn btn-brown" />
+          </div>
+          <div class="promo-section-terms">
+            <p>Terms and Conditions</p>
+            <ol>
+              <li>You can only apply 1 coupon per day</li>
+              <li>It only for dine</li>
+              <li>Buy 1 get 1 only for new user</li>
+              <li>Should make member card to apply coupon</li>
+            </ol>
+          </div>
+        </div>
+      </aside>
+
+      <main class="product-section">
+        <div class="product-section__wrapper">
+          <div class="product-section__header">
+            <ul class="product-categories">
+              <li class="category category-selected">Favorite Product</li>
+              <li class="category">Coffee</li>
+              <li class="category">Non Coffee</li>
+              <li class="category">Foods</li>
+              <li class="category">Add-on</li>
+            </ul>
+          </div>
+
+          <div class="product-cards__container">
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+
+            <div class="product-card-wrapper">
+              <div class="product-card">
+                <div class="product-card-image-wrapper">
+                  <!-- <img src="" alt=""> -->
+                </div>
+                <p class="product-name">Product Name</p>
+                <p class="product-price">IDR 34.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
 
     <footer class="auth-footer">
