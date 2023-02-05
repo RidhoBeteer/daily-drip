@@ -4,35 +4,366 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="1; url = /page/auth/signup.html" />
-    <title>redirecting . . .</title>
-    <style>
-      * {
-        margin: 0;
-      }
-
-      body {
-        width: 100vw;
-        height: 100vh;
-      }
-
-      body > div {
-        background-color: #333;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        font-family: "Rubik", sans-serif;
-        color: #ccc;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Daily Drip - Homepage</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/icon/coffee-shop-logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
   </head>
   <body>
-    <div>
-      <div class="box">
-        <p>Redirecting . . .</p>
+    <header class="main-header homepage-header">
+      <div class="spacer">
+        <div class="header-content__wrapper">
+          <a href="../../index.html" class="logo-container">
+            <img
+              src="../../assets/icon/coffee-shop-logo.png"
+              alt="cup of coffee"
+              class="logo-icon"
+            />
+            <h1 class="logo-text">Daily Drip</h1>
+          </a>
+
+          <input type="checkbox" name="menu-toggler" id="menu-toggler" />
+          <label for="menu-toggler" class="toggler">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
+          <div class="menu-wrapper">
+            <nav class="main-navigation">
+              <ul class="nav-items">
+                <li class="link-active"><a href="../index.html">Home</a></li>
+                <li>
+                  <a href="./product.html">Product</a>
+                </li>
+                <li><a href="./cart.html">Your Cart</a></li>
+                <li><a href="./history.html">History</a></li>
+              </ul>
+            </nav>
+
+            <div class="secondary-menu">
+              <a href="/page/auth/login.html" class="btn btn-white">Login</a>
+              <a href="/page/auth/signup.html" class="btn btn-yellow">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="homepage-hero">
+      <h2>Start Your Day with Coffee and Good Meals</h2>
+      <p>We provide high quality beans, good taste, and healthy meals made by love just for you. Start your day with us for a bigger smile!</p>
+      <a href="#" class="btn btn-yellow">Get Started</a>
+    </section>
+
+    <div class="homepage-abs__container">
+      <div class="homepage-abs">
+        <div class="homepage-abs__item">
+          <div class="icon-wrapper">
+            <img src="./assets/icon/user-icon.svg" alt="">
+          </div>
+          <div class="homepage-abs__text">
+            <p class="number">90+</p>
+          <p class="text">Staff</p>
+          </div>
+        </div>
+        <div class="homepage-abs__item">
+          <div class="icon-wrapper">
+            <img src="./assets/icon/location-pin-icon.svg" alt="">
+          </div>
+          <div class="homepage-abs__text">
+            <p class="number">30+</p>
+            <p class="text">Stores</p>
+          </div>
+        </div>
+        <div class="homepage-abs__item">
+          <div class="icon-wrapper">
+            <img src="./assets/icon/heart-icon.svg" alt="">
+          </div>
+          <div class="homepage-abs__text">
+            <p class="number">800+</p>
+            <p class="text">Customers</p>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="sections">
+      <section class="homepage-section about-section">
+        <div class="about__image-wrapper">
+          <img src="./assets/img/about-image.svg" alt="" class="about__image-content">
+        </div>
+        <div class="about-container">
+          <div class="section__header about__header">
+            <h3 class="section__title">We Provide Good Coffee and Healthy Meals</h3>
+            <p class="section__description">You can explore the menu that we provide with fun and have their own taste and make your day better.</p>
+          </div>
+
+          <div class="section__content about__content">
+            <ul>
+              <li>High quality beans</li>
+              <li>Healthy meals, you can request the ingredients</li>
+              <li>Chat with our staff to get better experience for ordering</li>
+              <li>Free member card with a minimum purchase of IDR 200.000.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="sections">
+      <section class="homepage-section favorite-section">
+        <div class="section__header favorite__header">
+          <h3 class="section__title">Here is People's Favorite</h3>
+          <p class="section__description">Let's choose and have a bit taste of poeple's favorite. It might be yours too!</p>
+        </div>
+
+        <div class="section__content favorite__content">
+          <div class="favorite-item">
+            <div class="image-wrapper">
+              <img src="https://s3-alpha-sig.figma.com/img/b8f7/0e2a/0d98dd6a1ea259209e5b715734ee5a22?Expires=1676246400&Signature=hdguLaVLwNQpQJMXitJa5MhhE3uSaXQ6LNl0kn8LHGOVPjD2q~NyV5hA2D0Re0nF4cx-zLcIvJ1Q8RSEisExR0c6yntZNV1rOf0f7sGcsY-svpyrn~z09rld1IBP0vup7OR8ranoBJVw7dZdOG28ZlshbIpJY3n8ZTc3oWDhQFD~huRPi-U61FvmJjqq7hJe393mcLk3Q64txX0DvbCYKleDOSCyhXH5pSaJ34mKRDmzRdqUuqo3byOx24JBILIMNkrpakmKZ-j2aJbhM8a10W7Kb40yMTtUsh4qjydu6--teZxgeNH2ipzjpL8xkmTxaRHYhMZJWk31IEWYM1hVVA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+            </div>
+            <p class="favorite-item__name">Hazelnut Latte</p>
+            <ul>
+              <li>Hazelnut Syrup</li>
+              <li>Wanilla Whipped Cream</li>
+              <li>Ice / Hot</li>
+              <li>Sliced Banana on Top</li>
+            </ul>
+            <p class="favorite-item__price">IDR 25.000</p>
+            <a href="#" class="btn btn-bordered-yellow">Order Now</a>
+          </div>
+
+          <div class="favorite-item">
+            <div class="image-wrapper">
+              <img src="https://s3-alpha-sig.figma.com/img/1195/e3b7/a63f096d3edcb57b0bc937039acae071?Expires=1676246400&Signature=F-objlGTm52hXUh-xaLhkzH9beBD4fXV4Wovf5HRCusG~-806r29q2w~ez~kliJFzufeYgDu0SCpDlr7EIikcynmtxb-9us5ehRYYl9pFfJ4WSZwWUooDI8pDuKPwSJ5lLT5NMFt~6~CJOw484YFr6IdWNetDBoamXeAN1kX4O7ie~K0RSBkb-vYC4IpfYr89FrO1oPbpEQoCyS-BvUIv9L5MjjB9X7hoSfLoUFtmjIA1LrQK3RDBddUeQUtyNq8yvrwGQL84JoW40Ay9wzMHsybrM-u9GND8llVFNS2gvbbgR3x6m9d8DO0rZgZXOyIE4iPcTEzRGJYQ~L6-RJjEg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+            </div>
+            <p class="favorite-item__name">Pinky Promise</p>
+            <ul>
+              <li>1 Shot of Coffee</li>
+              <li>Vanilla Whipped Cream</li>
+              <li>Chocolate Biscuits</li>
+              <li>Strawberry Syrup</li>
+              <li>Sliced strawberry on Top</li>
+            </ul>
+            <p class="favorite-item__price">IDR 30.000</p>
+            <a href="#" class="btn btn-bordered-yellow">Order Now</a>
+          </div>
+
+          <div class="favorite-item">
+            <div class="image-wrapper">
+              <img src="https://s3-alpha-sig.figma.com/img/01c2/516d/130f4255d3fd6c5a42948d74ac2a14f4?Expires=1676246400&Signature=fdUI2ywbPSm5LxU39fkveXaHLPe5epxeNMH3qTUe3uZDTB7Pq7-T04VTZzG2WzirxDQgSk654kI-845jEoj4ZGH9Rzo28q1K0io6mjb5GskMGDj6o5IaRz3WVTH6ZD7QF21IgEk~0F-g-kAyrsUtanKui9PwO7ArP24BcYiocfRCRlR6frdO1vKndTy9ktNHINpLnyXIFw3eLp~AXRH-anBPBh-r~S96dej2ql6TTXmjBUcah8PGB8YKBocQwabWVzEdeZhr5m8vgAcQNfGCiQflY84P86r800K7-Nk5cOZyeMsMzoT0auGZ0jMWhdKw9GZEa1chguUcsEwI1xjPtQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+            </div>
+            <p class="favorite-item__name">Chicken Wings</p>
+            <ul>
+              <li>Wings</li>
+              <li>Drum Sticks</li>
+              <li>Mayonaise and Lemon</li>
+              <li>Hot Fried</li>
+              <li>Secret Recipe</li>
+              <li>Buy 1 Get 1 only for Dine in</li>
+            </ul>
+            <p class="favorite-item__price">IDR 40.000</p>
+            <a href="#" class="btn btn-yellow">Order Now</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="sections">
+      <section class="homepage-section map-section">
+        <div class="section__header map__header">
+          <h3 class="section__title">Visit Our Store in the Spot on the Map Below</h3>
+          <p class="section__description">See our store in every city on the spot and spen your good day there. See you soon!</p>
+        </div>
+        <div class="section__content map__content">
+          <div class="map-image-wrapper">
+            <img src="./assets/img/map.svg" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="sections">
+      <section class="homepage-section sponsor-section">
+        <div class="section__header sponsor__header">
+          <h3 class="section__title">Our Partner</h3>
+        </div>
+        <div class="section__content sponsor__content">
+          <div class="sponsor-img"><img src="./assets/icon/sponsor/netflix-logo.svg" alt=""></div>
+          <div class="sponsor-img"><img src="./assets/icon/sponsor/reddit-logo.svg" alt=""></div>
+          <div class="sponsor-img"><img src="./assets/icon/sponsor/amazon-logo.svg" alt=""></div>
+          <div class="sponsor-img"><img src="./assets/icon/sponsor/discord-logo.png" alt=""></div>
+          <div class="sponsor-img"><img src="./assets/icon/sponsor/spotify-logo.svg" alt=""></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="sections">
+      <section class="homepage-section testimony-section">
+        <div class="section__header testimony__header">
+          <h3 class="section__title">Loved by Thousands of Happy Customer</h3>
+          <p class="section__description">These are the stories of our customers who have visited us with great pleasure.</p>
+        </div>
+        <div class="section__content testimony__content">
+          <div class="testimony-items">
+            <div class="testimony-item">
+              <div class="testimony-item__header">
+                <div class="customer-image">
+                  <img src="./assets/img/testimony/testimony-1.webp" alt="">
+                </div>
+                <div class="customer-info">
+                  <p class="name">Viezh Robert</p>
+                  <p class="location">Warsaw, Poland</p>
+                </div>
+                <div class="customer-rating">
+                  <p>4.5</p>
+                  <div class="rating-icon">
+                    <img src="./assets/icon/star-icon.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="testimony-item__content">
+                <blockquote>
+                  “Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!
+                </blockquote>
+              </div>
+            </div>
+
+            <div class="testimony-item">
+              <div class="testimony-item__header">
+                <div class="customer-image">
+                  <img src="./assets/img/testimony/testimony-2.webp" alt="">
+                </div>
+                <div class="customer-info">
+                  <p class="name">Yessica Christy</p>
+                  <p class="location">Shanxi, China</p>
+                </div>
+                <div class="customer-rating">
+                  <p>4.5</p>
+                  <div class="rating-icon">
+                    <img src="./assets/icon/star-icon.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="testimony-item__content">
+                <blockquote>
+                  “I like it because I like to travel far and still can make my day better just by drinking their Hazelnut Latte
+                </blockquote>
+              </div>
+            </div>
+
+            <div class="testimony-item">
+              <div class="testimony-item__header">
+                <div class="customer-image">
+                  <img src="./assets/img/testimony/testimony-3.webp" alt="">
+                </div>
+                <div class="customer-info">
+                  <p class="name">Kim Young Jou</p>
+                  <p class="location">Seoul, South Korea</p>
+                </div>
+                <div class="customer-rating">
+                  <p>4.5</p>
+                  <div class="rating-icon">
+                    <img src="./assets/icon/star-icon.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="testimony-item__content">
+                <blockquote>
+                  “This is very unusual for my taste, I haven't liked coffee before but their coffee is the best! and yup, you have to order the chicken wings, the best in town!
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimony-footer">
+          <div class="testimony-left">
+            <div class="pill-shape"></div>
+            <div class="circle-shape"></div>
+            <div class="circle-shape"></div>
+            <div class="circle-shape"></div>
+          </div>
+
+          <div class="testimony-right">
+            <div class="navigation nav-left"><img src="./assets/icon/arrow-left.svg" alt=""></div>
+            <div class="navigation nav-right"><img src="./assets/icon/arrow-right.svg" alt=""></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="homepage-abs__container">
+      <div class="homepage-cta">
+        <div class="homepage-cta__content">
+          <p class="title">Check our promo today!</p>
+          <p class="description">Let's see the deals and pick yours!</p>
+        </div>
+        <a href="#" class="btn btn-yellow">See Promo</a>
+      </div>
+    </div>
+
+    <footer class="auth-footer homepage-footer">
+      <div class="auth-footer__left">
+        <a href="index.html" class="logo-container">
+          <img
+            src="../../assets/icon/coffee-shop-logo.png"
+            alt="cup of coffee"
+            class="logo-icon"
+          />
+          <h1 class="logo-text">Daily Drip</h1>
+        </a>
+
+        <p class="description">
+          Coffee Shop is a store that sells some good meals, and especially
+          coffee. We provide high quality beans
+        </p>
+
+        <ul class="socmed">
+          <li>
+            <img src="../../assets/icon/Facebook.png" alt="Facebook logo" />
+          </li>
+          <li>
+            <img src="../../assets/icon/Twitter.png" alt="Twitter logo" />
+          </li>
+          <li>
+            <img src="../../assets/icon/Instagram.png" alt="Instagram logo" />
+          </li>
+        </ul>
+
+        <p class="copyright">&copy; Daily Drip 2023</p>
+      </div>
+      <div class="auth-footer__right">
+        <div class="footer-col product">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Countries</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col engage">
+          <h3>Engage</h3>
+          <ul>
+            <li><a href="#">Daily Drip ?</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
