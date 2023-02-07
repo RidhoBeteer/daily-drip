@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Daily Drip - Product Detail</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/icon/coffee-shop-logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./product-detail.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="spacer">
+        <div class="header-content__wrapper">
+          <a href="../../index.html" class="logo-container">
+            <img
+              src="../../assets/icon/coffee-shop-logo.png"
+              alt="cup of coffee"
+              class="logo-icon"
+            />
+            <h1 class="logo-text">Daily Drip</h1>
+          </a>
+
+          <input type="checkbox" name="menu-toggler" id="menu-toggler" />
+          <label for="menu-toggler" class="toggler">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
+          <div class="menu-wrapper">
+            <nav class="main-navigation">
+              <ul class="nav-items">
+                <li><a href="../index.html">Home</a></li>
+                <li class="link-active">
+                  <a href="./product.html">Product</a>
+                </li>
+                <li><a href="./cart.html">Your Cart</a></li>
+                <li><a href="./history.html">History</a></li>
+              </ul>
+            </nav>
+
+            <div class="secondary-menu">
+              <ul>
+                <li>
+                  <img src="../assets/icon/search-icon.svg" alt="search icon" />
+                </li>
+                <li>
+                  <img
+                    src="../assets/icon/chatbox-icon.svg"
+                    alt="dialog bar icon"
+                  />
+                </li>
+                <li>
+                  <div class="image-container">
+                    <img
+                      src="../assets/img/profile-picture.webp"
+                      alt="Smiling girl picture"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- <header class="main-header homepage-header">
+      <div class="spacer">
+        <div class="header-content__wrapper">
+          <a href="../../" class="logo-container">
+            <img
+              src="../../assets/icon/coffee-shop-logo.png"
+              alt="cup of coffee"
+              class="logo-icon"
+            />
+            <h1 class="logo-text">Daily Drip</h1>
+          </a>
+
+          <input type="checkbox" name="menu-toggler" id="menu-toggler" />
+          <label for="menu-toggler" class="toggler">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
+          <div class="menu-wrapper">
+            <nav class="main-navigation">
+              <ul class="nav-items">
+                <li class="link-active"><a href="../">Home</a></li>
+                <li>
+                  <a href="/page/product.html">Product</a>
+                </li>
+                <li><a href="/page/cart.html">Your Cart</a></li>
+                <li><a href="/page/history.html">History</a></li>
+              </ul>
+            </nav>
+
+            <div class="secondary-menu">
+              <a href="/page/auth/login.html" class="btn btn-white">Login</a>
+              <a href="/page/auth/signup.html" class="btn btn-yellow"
+                >Sign Up</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header> -->
+
+    <main class="product-detail-main-container">
+      <div class="product-detail__header">
+        <div class="breadcrumb">
+          <p>Favorite & Promo <span>> Cold Brew</span></p>
+        </div>
+        <div class="horizontal-timeline">
+          <div class="timeline-item">
+            <div class="img-wrapper">
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.1216 0.549316C4.60758 0.549316 0.121582 5.03532 0.121582 10.5493C0.121582 16.0633 4.60758 20.5493 10.1216 20.5493C15.6356 20.5493 20.1216 16.0633 20.1216 10.5493C20.1216 5.03532 15.6356 0.549316 10.1216 0.549316ZM8.12258 14.9623L5.11703 11.9632C4.72628 11.5733 4.72549 10.9405 5.11527 10.5496C5.50529 10.1585 6.13859 10.1578 6.52951 10.548L8.12058 12.1363L12.7076 7.54932C13.098 7.15885 13.7311 7.15885 14.1216 7.54932C14.512 7.93978 14.512 8.57285 14.1216 8.96332L8.12258 14.9623Z"
+                />
+              </svg>
+            </div>
+            <p>Order</p>
+          </div>
+          <div class="timeline-item">
+            <div class="img-wrapper">
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.1216 0.549316C4.60758 0.549316 0.121582 5.03532 0.121582 10.5493C0.121582 16.0633 4.60758 20.5493 10.1216 20.5493C15.6356 20.5493 20.1216 16.0633 20.1216 10.5493C20.1216 5.03532 15.6356 0.549316 10.1216 0.549316ZM8.12258 14.9623L5.11703 11.9632C4.72628 11.5733 4.72549 10.9405 5.11527 10.5496C5.50529 10.1585 6.13859 10.1578 6.52951 10.548L8.12058 12.1363L12.7076 7.54932C13.098 7.15885 13.7311 7.15885 14.1216 7.54932C14.512 7.93978 14.512 8.57285 14.1216 8.96332L8.12258 14.9623Z"
+                />
+              </svg>
+            </div>
+            <p>Checkout</p>
+          </div>
+          <div class="timeline-item">
+            <div class="img-wrapper">
+              <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FFBA33" />
+              </svg>
+            </div>
+            <p>Payment</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-detail__main-section">
+        <div class="product-preview">
+          <div class="product-image-wrapper">
+            <img src="../assets/img/product-detail.webp" alt="" />
+          </div>
+
+          <p class="product-delivery-note">
+            Delivery only on <strong>Monday to Friday</strong> at
+            <strong>1 - 7 pm</strong>
+          </p>
+        </div>
+
+        <div class="product-detail-content">
+          <div class="product-detail-info">
+            <h2 class="product-detail-name">Cold Brew</h2>
+            <p class="product-detail-price">IDR 30.000</p>
+          </div>
+
+          <div class="product-detail-text">
+            <p class="product-detail-description">
+              Cold brewing is a method of brewing that combines ground coffee
+              and cool water and uses time instead of heat to extract the
+              flavor. It is brewed in small batches and steeped for as long as
+              48 hours.
+            </p>
+          </div>
+
+          <form action="#" class="product-detail-form">
+            <div class="select-options-group">
+              <select name="size" id="size">
+                <option disabled selected>Select Size</option>
+                <option value="regular">Regular</option>
+                <option value="large">Large</option>
+                <option value="extraLarge">Extra Large</option>
+              </select>
+            </div>
+
+            <div class="input-group select-options-group">
+              <select name="delivery" id="delivery">
+                <option disabled selected>Select Delivery Method</option>
+                <option value="dineIn">Dine In</option>
+                <option value="door">Door Delivery</option>
+                <option value="pickup">Pick Up</option>
+              </select>
+            </div>
+
+            <div class="grouped-input">
+              <div class="counter">
+                <div class="value-button" id="decrease">-</div>
+                <input type="number" id="amount" value="2" />
+                <div class="value-button" id="increase">+</div>
+              </div>
+              <a href="#" class="btn btn-yellow">Add To Cart</a>
+            </div>
+
+            <input
+              type="submit"
+              value="Checkout"
+              class="btn btn-brown checkout-btn"
+            />
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="auth-footer homepage-footer">
+      <div class="auth-footer__left">
+        <a href="index.html" class="logo-container">
+          <img
+            src="../../assets/icon/coffee-shop-logo.png"
+            alt="cup of coffee"
+            class="logo-icon"
+          />
+          <h1 class="logo-text">Daily Drip</h1>
+        </a>
+
+        <p class="description">
+          Coffee Shop is a store that sells some good meals, and especially
+          coffee. We provide high quality beans
+        </p>
+
+        <ul class="socmed">
+          <li>
+            <img src="../../assets/icon/Facebook.png" alt="Facebook logo" />
+          </li>
+          <li>
+            <img src="../../assets/icon/Twitter.png" alt="Twitter logo" />
+          </li>
+          <li>
+            <img src="../../assets/icon/Instagram.png" alt="Instagram logo" />
+          </li>
+        </ul>
+
+        <p class="copyright">&copy; Daily Drip 2023</p>
+      </div>
+      <div class="auth-footer__right">
+        <div class="footer-col product">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Countries</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col engage">
+          <h3>Engage</h3>
+          <ul>
+            <li><a href="#">Daily Drip ?</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
