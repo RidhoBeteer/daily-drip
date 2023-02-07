@@ -316,4 +316,9 @@ input::-webkit-inner-spin-button {
     width: 100%;
     text-align: center;
   }
+
+  .breadcrumb span {
+    font-weight: 700;
+    color: var(--color-brown);
+  }
 }

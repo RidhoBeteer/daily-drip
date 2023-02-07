@@ -29,6 +29,11 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+a,
+a:visited {
+  color: var(--color-gray);
+}
+
 .btn {
   border: 0;
   border-radius: 10px;
@@ -40,23 +45,28 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+a.btn:hover,
 .btn:hover {
   box-shadow: rgba(83, 87, 92, 0.2) 0px 8px 15px;
 }
 
+a.btn-yellow,
 .btn-yellow {
   background-color: var(--color-yellow);
   color: var(--color-brown);
 }
 
+a.btn-yellow:hover,
 .btn-yellow:hover {
   background-color: var(--color-yellow-hover);
 }
 
+a.btn-white,
 .btn-white {
   background-color: var(--color-white);
 }
 
+a.btn-brown,
 .btn-brown {
   background-color: var(--color-brown);
   color: var(--color-grayish);
@@ -373,6 +383,10 @@ input[type="submit"] {
   /* display: flex;
   flex-direction: column; */
   z-index: 3;
+}
+
+.menu-wrapper li {
+  cursor: pointer;
 }
 
 input[type="checkbox"]:checked ~ .menu-wrapper {
