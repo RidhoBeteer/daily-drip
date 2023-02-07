@@ -623,6 +623,34 @@ input[type="radio"] {
   background-color: rgba(255, 0, 0, 0.452);
   border-radius: 50%;
   transform: translateY(-30%);
+  display: inline-block;
+  overflow: hidden;
+}
+
+.product-card-wrapper:first-child .product-card-image-wrapper img,
+.product-card-wrapper:nth-child(9) .product-card-image-wrapper img {
+  transform: scale(1.8);
+}
+
+.product-card-wrapper:nth-child(2) .product-card-image-wrapper img,
+.product-card-wrapper:nth-child(10) .product-card-image-wrapper img {
+  transform: scale(1.5) translateY(20px);
+}
+
+.product-card-wrapper:nth-child(3) .product-card-image-wrapper img,
+.product-card-wrapper:nth-child(7) .product-card-image-wrapper img,
+.product-card-wrapper:nth-child(11) .product-card-image-wrapper img {
+  transform: scale(1.6);
+}
+
+.product-card-wrapper:nth-child(4) .product-card-image-wrapper img,
+.product-card-wrapper:nth-child(8) .product-card-image-wrapper img,
+.product-card-wrapper:nth-child(12) .product-card-image-wrapper img {
+  transform: scale(1.4) translateY(8px);
+}
+
+.product-card-wrapper:nth-child(6) .product-card-image-wrapper img {
+  transform: scale(1.17) translate(-5px, -4px);
 }
 
 .product-card .product-name {
@@ -694,10 +722,10 @@ input[type="radio"] {
 .promo-card::before {
   content: "";
   height: 85%;
-  width: 28px;
+  width: 14px;
   position: absolute;
   top: calc(15% / 2);
-  right: -28px;
+  right: -14px;
   background-color: #000000;
   border-radius: 0 20px 20px 0;
 }
@@ -705,10 +733,10 @@ input[type="radio"] {
 .promo-card::after {
   content: "";
   height: 70%;
-  width: 24px;
+  width: 14px;
   position: absolute;
   top: 15%;
-  right: -52px;
+  right: -28px;
   background-color: var(--color-brown);
   border-radius: 0 20px 20px 0;
 }
@@ -1238,6 +1266,10 @@ img {
     padding: 115px 45px 45px;
   }
 
+  .general-footer {
+    padding-top: 50px;
+  }
+
   .auth-footer__left {
     align-items: flex-start;
     text-align: initial;
@@ -1423,6 +1455,10 @@ img {
     padding: 130px 50px 50px;
   }
 
+  .general-footer {
+    padding-top: 50px;
+  }
+
   .footer-col {
     min-width: 150px;
   }
@@ -1545,13 +1581,20 @@ img {
     align-items: center;
   }
 
+  .product-section__wrapper,
+  .promo-section__wrapper {
+    padding: 45px;
+  }
+
   .promo-section {
-    padding-left: 50px;
-    padding-right: 50px;
+    /* padding-left: 50px;
+    padding-right: 50px; */
+    padding: 0;
+    flex: 1;
   }
 
   .product-section {
-    flex: 4;
+    flex: 3;
   }
 
   .homepage-header .spacer {
