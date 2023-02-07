@@ -1194,7 +1194,6 @@ img {
 
   .cta {
     position: absolute;
-    top: 0;
     flex-direction: row;
     min-height: fit-content;
     width: 80%;
@@ -1395,7 +1394,7 @@ img {
 
   .product-section__wrapper,
   .promo-section__wrapper {
-    padding: var(--spacing-mobile-horizontal) 45px;
+    padding: var(--spacing-mobile-horizontal) 30px;
   }
 }
 
