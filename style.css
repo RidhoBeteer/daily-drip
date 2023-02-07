@@ -1000,7 +1000,7 @@ img {
 }
 
 .sponsor-img img {
-  filter: grayscale(100);
+  filter: grayscale(50) opacity(0.5);
   max-height: 100%;
 }
 
@@ -1009,10 +1009,12 @@ img {
 }
 
 .testimony-items {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 25px;
+  overflow-x: scroll;
 }
 
 .testimony-item {
