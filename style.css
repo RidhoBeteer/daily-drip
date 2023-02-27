@@ -23,6 +23,19 @@ body {
   width: 100%;
 }
 
+body::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #838383;
+  border-radius: 3px;
+}
+
 a,
 button,
 input[type="submit"] {
@@ -86,6 +99,7 @@ a.btn-brown,
   /* height: 100vh; */
   display: flex;
   flex-direction: column-reverse;
+  position: relative;
 }
 
 .auth-item {
@@ -98,6 +112,113 @@ a.btn-brown,
   background-image: url("./assets/img/auth_banner.webp");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.toast {
+  position: fixed;
+  top: 16px;
+  right: 25px;
+  width: 375px;
+  background: #fff;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*   gap: 20px; */
+  border-radius: 12px;
+  border-left: 3px solid red;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  overflow: hidden;
+  transform: translateX(calc(100% + 25px));
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.toast.active {
+  transform: translateX(0);
+}
+
+.toast i:first-child {
+  color: red;
+  font-size: 20px;
+}
+
+.toast-text {
+  margin: 0;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+}
+
+.toast i:last-child {
+  color: #ccc;
+  cursor: pointer;
+  transition: 350ms;
+}
+
+.toast i:last-child:hover {
+  color: #333;
+}
+
+.modal-container {
+  position: fixed;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+
+.modal-container.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-active {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.modal {
+  background: var(--color-grayish);
+  width: 350px;
+  min-height: 150px;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 3px solid #2ecc71;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content p {
+  margin: 0;
+  text-align: center;
+}
+
+.modal-close {
+  border: none;
+  outline: none;
+  background: var(--color-yellow);
+  font-family: inherit;
+  font-weight: 600;
+  padding: 0.5em 1.5em;
+  border-radius: 6px;
+  color: var(--color-brown);
+  cursor: pointer;
+  transition: 350ms;
+}
+
+.modal-close:hover {
+  background: var(--color-yellow-hover);
 }
 
 .auth-content {
@@ -150,12 +271,14 @@ a.btn-brown,
 .auth-form form {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  /* gap: 1em; */
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
+  position: relative;
+  margin-bottom: 25px;
 }
 
 .input-group label {
@@ -168,6 +291,41 @@ a.btn-brown,
   outline: none;
   border: 1px solid var(--color-gray);
   border-radius: 10px;
+}
+
+.input-group.success input {
+  border: 2px solid #2ecc71;
+}
+
+.input-group.error input {
+  border: 2px solid #e74c3c;
+}
+
+.input-group i {
+  position: absolute;
+  top: 49px;
+  right: 1em;
+  visibility: hidden;
+}
+
+.input-group.error i.fa-exclamation-circle,
+.input-group.error small {
+  color: #e74c3c;
+  display: inline-block;
+  visibility: visible;
+}
+
+.input-group.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.input-group small {
+  visibility: hidden;
+  position: absolute;
+  font-weight: 400;
+  bottom: -16px;
+  left: 0;
 }
 
 .input-group .forgot-link {
@@ -316,6 +474,17 @@ a.btn-brown,
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+.forgot-input-group i {
+  position: absolute;
+  top: 20px;
+  right: 1em;
+  visibility: hidden;
+}
+
+.forgot-input-group small {
+  bottom: -20px;
 }
 
 .forgot-button,
