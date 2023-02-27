@@ -17,6 +17,10 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
   </head>
   <body>
     <header class="main-header">
@@ -110,7 +114,12 @@
               class="profile-content__items profile-content__unordered profile-aside"
             >
               <p class="text">Do you want to save the change ?</p>
-              <input type="button" value="Save Change" class="btn btn-brown" />
+              <input
+                type="button"
+                value="Save Change"
+                id="btn-save"
+                class="btn btn-brown"
+              />
               <input type="button" value="Cancel" class="btn btn-yellow" />
               <input type="button" value="Log out" class="btn btn-white" />
             </div>
@@ -120,7 +129,7 @@
                 <div class="profile-content__top">
                   <h3>Contacts</h3>
                   <form action="#">
-                    <div class="input-group">
+                    <div class="profile-input-group input-group">
                       <label for="email">Email address :</label>
                       <input
                         type="email"
@@ -128,9 +137,11 @@
                         id="email"
                         value="zulaikha17@gmail.com"
                       />
+                      <i class="fas fa-exclamation-circle"></i>
+                      <small></small>
                     </div>
 
-                    <div class="input-group">
+                    <div class="profile-input-group input-group">
                       <label for="phone">Mobile Phone :</label>
                       <input
                         type="tel"
@@ -140,7 +151,7 @@
                       />
                     </div>
 
-                    <div class="input-group">
+                    <div class="profile-input-group input-group">
                       <label for="address">Delivery address :</label>
                       <input
                         type="text"
@@ -154,7 +165,7 @@
                 <div class="profile-content__bottom">
                   <h3>Details</h3>
                   <form action="#">
-                    <div class="input-group">
+                    <div class="profile-input-group input-group">
                       <label for="full-name">Display Name :</label>
                       <input
                         type="text"
@@ -164,7 +175,7 @@
                       />
                     </div>
 
-                    <div class="input-group">
+                    <div class="profile-input-group input-group">
                       <label for="first-name">First Name :</label>
                       <input
                         type="text"
@@ -174,7 +185,7 @@
                       />
                     </div>
 
-                    <div class="input-group">
+                    <div class="profile-input-group input-group">
                       <label for="last-name">Last Name :</label>
                       <input
                         type="text"
@@ -184,7 +195,7 @@
                       />
                     </div>
 
-                    <div class="input-group">
+                    <div class="profile-input-group input-group">
                       <label for="birthday">DD/MM/YY :</label>
                       <input
                         type="date"
@@ -195,7 +206,7 @@
                     </div>
                   </form>
 
-                  <div class="radio-input-group">
+                  <div class="radio-profile-input-group input-group">
                     <span class="radio-input">
                       <input
                         type="radio"
@@ -278,5 +289,6 @@
         </div>
       </div>
     </footer>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
