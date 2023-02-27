@@ -23,6 +23,22 @@
     />
   </head>
   <body>
+    <div class="modal-container">
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <p>Profile Data:</p>
+          <p id="email-modal"></p>
+          <p id="phone-modal"></p>
+          <p id="address-modal"></p>
+          <p id="display-name-modal"></p>
+          <p id="first-name-modal"></p>
+          <p id="last-name-modal"></p>
+          <p id="birthday-modal"></p>
+          <p id="gender-modal"></p>
+        </div>
+        <button type="button" id="modal-close" class="modal-close">OK</button>
+      </div>
+    </div>
     <header class="main-header">
       <div class="spacer">
         <div class="header-content__wrapper">
@@ -137,7 +153,6 @@
                         id="email"
                         value="zulaikha17@gmail.com"
                       />
-                      <i class="fas fa-exclamation-circle"></i>
                       <small></small>
                     </div>
 
@@ -147,8 +162,9 @@
                         type="tel"
                         name="phone"
                         id="phone"
-                        value="(+62)813456782"
+                        value="081234567890"
                       />
+                      <small></small>
                     </div>
 
                     <div class="profile-input-group input-group">
@@ -159,6 +175,7 @@
                         id="address"
                         value="Iskandar Street no. 67 Block A Near Bus Stop"
                       />
+                      <small></small>
                     </div>
                   </form>
                 </div>
@@ -173,6 +190,7 @@
                         id="full-name"
                         value="Zulaikha"
                       />
+                      <small></small>
                     </div>
 
                     <div class="profile-input-group input-group">
@@ -183,6 +201,7 @@
                         id="first-name"
                         value="Zulaikha"
                       />
+                      <small></small>
                     </div>
 
                     <div class="profile-input-group input-group">
@@ -193,6 +212,7 @@
                         id="last-name"
                         value="Nirmala"
                       />
+                      <small></small>
                     </div>
 
                     <div class="profile-input-group input-group">
@@ -203,10 +223,11 @@
                         id="birthday"
                         value="1990-04-03"
                       />
+                      <small></small>
                     </div>
                   </form>
 
-                  <div class="radio-profile-input-group input-group">
+                  <div class="radio-input-group">
                     <span class="radio-input">
                       <input
                         type="radio"

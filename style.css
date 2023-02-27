@@ -181,7 +181,7 @@ a.btn-brown,
 
 .modal {
   background: var(--color-grayish);
-  width: 350px;
+  min-width: 350px;
   min-height: 150px;
   border-radius: 12px;
   padding: 25px;
@@ -191,6 +191,10 @@ a.btn-brown,
   align-items: center;
   justify-content: center;
   border-left: 3px solid #2ecc71;
+}
+
+.modal-content > p:not(:first-child) {
+  text-align: justify;
 }
 
 .modal-content {
@@ -654,6 +658,13 @@ input[type="checkbox"]:checked ~ .menu-wrapper {
 .profile-content__unordered {
   order: 4;
   text-align: center;
+}
+
+.profile-input-group.input-group.error input[type="text"],
+.profile-input-group.input-group.error input[type="email"],
+.profile-input-group.input-group.error input[type="tel"],
+.profile-input-group.input-group.error input[type="date"] {
+  border-bottom: 1px solid #e74c3c;
 }
 
 .radio-input-group {

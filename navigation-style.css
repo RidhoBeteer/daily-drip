@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-gray);
+}
+
+header {
+  /*   outline: 1px solid blue; */
+  position: relative;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.3);
+  background: #fff;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brand {
+  /*   outline: 1px solid red; */
+  display: flex;
+  align-items: center;
+}
+
+.brand-image {
+  width: 30px;
+  height: 30px;
+}
+
+.brand-text {
+  font-weight: 800;
+  color: #000;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background: #000;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+
+.toggle .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .bar2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+.toggle .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile-menu {
+  position: absolute;
+  z-index: 200;
+  background: #f7f7f7;
+  top: 80px;
+  left: 0;
+  right: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  gap: 1em;
+  transition: all 750ms ease-in;
+}
+
+.mobile-menu.active {
+  display: flex;
+  height: auto;
+  padding: 25px;
+}
+
+.mobile-menu ul {
+  margin: 0;
+  /*   outline: 1px solid #fff; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-menu ul li {
+  /*   outline: 1px solid red; */
+  width: 100%;
+  text-align: center;
+}
+
+nav,
+.header-buttons {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 1em;
+}
+
+a.link-active {
+  color: var(--color-brown);
+  font-weight: 700;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  border-radius: 25px;
+}
+
+.btn-white {
+  background: #fff;
+  color: #000;
+}
+
+.btn-yellow {
+  background: #ffba33;
+  color: #fff;
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    padding: 25px 50px;
+  }
+  .hamburger {
+    display: none;
+  }
+
+  .mobile-menu,
+  .mobile-menu.active {
+    display: none;
+  }
+
+  nav,
+  .header-buttons {
+    display: block;
+  }
+}
