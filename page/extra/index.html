@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background-color: #201d3a;
+        font-family: "Karla", sans-serif;
+        color: #f7f7f7;
+      }
+      .container {
+        width: 100%;
+        min-height: 100vh;
+      }
+      .wrapper {
+        padding: 45px 90px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+      .card {
+        background-color: #0f0d1e;
+        border-radius: 4px;
+        box-shadow: 0px 1px 1px 0px hsla(0, 0%, 0%, 0.14),
+          0px 2px 1px -1px hsla(0, 0%, 0%, 0.12),
+          0px 1px 3px 0px hsla(0, 0%, 0%, 0.2);
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        transition: 350ms;
+        cursor: pointer;
+      }
+      .card:hover {
+        background-color: #0f0d1ebe;
+      }
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .card-info {
+        align-self: center;
+        text-align: center;
+      }
+      .card-image {
+        display: flex;
+        justify-content: center;
+      }
+      .card-image div {
+        width: 90px;
+        height: 90px;
+        border: 2px solid #9a42e7;
+        border-radius: 50%;
+        background-color: #191a19;
+      }
+      .card p {
+        margin: 0;
+      }
+      .name {
+        font-size: 1.25rem;
+      }
+      .username {
+        color: #d3cbcb;
+        font-size: 0.9rem;
+      }
+      .card-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+      .contact-item {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .label {
+        color: #888888;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="wrapper" id="card-wrapper"></div>
+    </main>
+    <script>
+      const fetching = fetch("https://jsonplaceholder.typicode.com/users");
+      const wrapper = document.getElementById("card-wrapper");
+
+      const fetchUsers = async () => {
+        try {
+          const response = await fetching;
+
+          if (response.status !== 200) {
+            throw new Error("Something went wrong, try again later!");
+          }
+
+          const data = await response.json();
+          // console.log(data);
+          const users = data.map((item) => {
+            const user = {
+              info: [item.name, item.username],
+              contact: [item.email, item.phone, item.website],
+            };
+
+            return user;
+          });
+
+          users.forEach((user) => {
+            renderUserData(user);
+          });
+        } catch (error) {
+          console.log(error.message);
+        }
+      };
+
+      const renderUserData = (userObj) => {
+        // console.log(userObj);
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.addEventListener("click", () => {
+          console.log(card.children[0].children[1].children[0].innerText);
+        });
+
+        const cardContent = document.createElement("div");
+        cardContent.className = "card-content";
+
+        const cardImage = document.createElement("div");
+        cardImage.className = "card-image";
+
+        const emptyDiv = document.createElement("div");
+        cardImage.append(emptyDiv);
+        cardContent.append(cardImage);
+
+        const cardInfo = document.createElement("div");
+        cardInfo.className = "card-info";
+        userObj.info.forEach((el, idx) => {
+          const infoItem = document.createElement("p");
+          if (idx === 0) {
+            infoItem.className = "name";
+          } else {
+            infoItem.className = "username";
+          }
+          infoItem.innerText = el;
+          cardInfo.appendChild(infoItem);
+        });
+
+        const cardContact = document.createElement("div");
+        cardContact.className = "card-contact";
+        userObj.contact.forEach((el, idx) => {
+          const contactItem = document.createElement("div");
+          contactItem.className = "contact-item";
+
+          const contactLabel = document.createElement("p");
+          contactLabel.className = "label";
+
+          const contactData = document.createElement("p");
+          contactData.innerText = el;
+
+          if (idx === 0) {
+            contactLabel.innerText = "Email";
+          } else if (idx === 1) {
+            contactLabel.innerText = "Phone";
+          } else {
+            contactLabel.innerText = "Website";
+          }
+
+          contactItem.append(contactLabel, contactData);
+          cardContact.append(contactItem);
+        });
+
+        cardContent.append(cardInfo, cardContact);
+
+        card.append(cardContent);
+        wrapper.append(card);
+      };
+
+      fetchUsers();
+    </script>
+  </body>
+</html>
